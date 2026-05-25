@@ -1,6 +1,6 @@
 # User Practice API Playwright Tests
 
-Boilerplate Playwright API tests for the local User Practice API.
+Boilerplate Playwright API tests for the User Practice API.
 
 ## Setup
 
@@ -17,27 +17,29 @@ cd /Users/sinc/repo/interview-q
 npm start
 ```
 
-Run the Playwright tests from this project:
+Run the Playwright tests from this project with the required environment variables:
 
 ```bash
 cd /Users/sinc/repo/interview-q-plw
-npm test
+API_BASE_URL=<api-url> ADMIN_SECRET=<admin-secret> npm test
 ```
 
 ## Environment
 
-Defaults:
+Required:
 
 ```text
-API_BASE_URL=http://localhost:3015
-ADMIN_SECRET=1001
+API_BASE_URL=<api-url>
+ADMIN_SECRET=<admin-secret>
 ```
 
-Override when needed:
+Example command format:
 
 ```bash
-API_BASE_URL=https://interview.sinccloud.com ADMIN_SECRET=1001 npm test
+API_BASE_URL=<api-url> ADMIN_SECRET=<admin-secret> npm test
 ```
+
+The project intentionally has no fallback defaults. If either variable is missing, Playwright exits before running tests.
 
 ## What Is Included
 

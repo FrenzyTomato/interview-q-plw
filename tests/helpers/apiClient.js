@@ -1,7 +1,7 @@
 export async function createUser(request, userOverrides = {}) {
   const response = await request.post("/create", {
     headers: {
-      "x-admin-secret": process.env.ADMIN_SECRET || "1001"
+      "x-admin-secret": process.env.ADMIN_SECRET
     },
     data: {
       name: "Maya Chen",

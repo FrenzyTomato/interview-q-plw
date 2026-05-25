@@ -51,7 +51,7 @@ test.describe("User Practice API", () => {
 
     const response = await request.post(`/verify?uuid=${created.body.uuid}`, {
       headers: {
-        "x-admin-secret": process.env.ADMIN_SECRET || "1001"
+        "x-admin-secret": process.env.ADMIN_SECRET
       },
       data: {
         checks: {
